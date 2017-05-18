@@ -44,7 +44,7 @@ Preview.prototype._onKeyDown = function(e) {
       e.preventDefault();
       this.left.classList.add('active');
       TweenLite.to(this.sideBar, 1, {width: 0, padding: 0, ease: Power1.easeInOut});
-    break;
+      break;
     // Up arrow
     case 38:
       e.preventDefault();
@@ -53,13 +53,13 @@ Preview.prototype._onKeyDown = function(e) {
       if (this.currentFormat === -1) {
         this.currentFormat = this.links.length - 1;
       }
-    break;
+      break;
     // Right arrow
     case 39:
       e.preventDefault();
       this.right.classList.add('active');
       TweenLite.to(this.sideBar, 1, {width: 200, padding: '0 40px', ease: Power1.easeInOut});
-    break;
+      break;
     // Down arrow
     case 40:
       e.preventDefault();
@@ -68,7 +68,7 @@ Preview.prototype._onKeyDown = function(e) {
       if (this.currentFormat === this.links.length) {
         this.currentFormat = 0;
       }
-    break;
+      break;
   }
 };
 
