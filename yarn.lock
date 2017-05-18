@@ -184,12 +184,6 @@ assert-plus@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/assert-plus/-/assert-plus-1.0.0.tgz#f12e0f3c5d77b0b1cdd9146942e4e96c1e4dd525"
 
-assert@^1.3.0:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/assert/-/assert-1.4.1.tgz#99912d591836b5a6f5b345c0f07eefc08fc65d91"
-  dependencies:
-    util "0.10.3"
-
 async-each-series@0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/async-each-series/-/async-each-series-0.1.1.tgz#7617c1917401fd8ca4a28aadce3dbae98afeb432"
@@ -1586,7 +1580,7 @@ duplexer2@^0.1.4, duplexer2@~0.1.0:
   dependencies:
     readable-stream "^2.0.2"
 
-duplexer@~0.1.1:
+duplexer@^0.1.1, duplexer@~0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/duplexer/-/duplexer-0.1.1.tgz#ace6ff808c1ce66b57d1ebf97977acb02334cfc1"
 
@@ -1766,7 +1760,7 @@ etag@^1.7.0, etag@~1.7.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.7.0.tgz#03d30b5f67dd6e632d2945d30d6652731a34d5d8"
 
-event-stream@^3.3.0, event-stream@^3.3.1:
+event-stream@^3.3.0:
   version "3.3.4"
   resolved "https://registry.yarnpkg.com/event-stream/-/event-stream-3.3.4.tgz#4ab4c9a0f5a54db9338b4c34d86bfce8f4b35571"
   dependencies:
@@ -1950,10 +1944,6 @@ filenamify@^1.0.1:
     filename-reserved-regex "^1.0.0"
     strip-outer "^1.0.0"
     trim-repeated "^1.0.0"
-
-filesize@~2.0.0:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/filesize/-/filesize-2.0.4.tgz#7805941c60fcdfe63f46d7ea358c59ade11c1325"
 
 fill-range@^2.1.0:
   version "2.2.3"
@@ -2450,14 +2440,6 @@ gulp-expect-file@0.0.7:
     through2 "^1.0.0"
     xtend "^3.0.0"
 
-gulp-filesize@0.0.6:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/gulp-filesize/-/gulp-filesize-0.0.6.tgz#dd677a4f0e9af7efe20008682be4c78f409c556b"
-  dependencies:
-    filesize "~2.0.0"
-    gulp-util "~2.2.0"
-    map-stream "~0.0.4"
-
 gulp-htmlmin@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/gulp-htmlmin/-/gulp-htmlmin-3.0.0.tgz#19ea8002d1231d6b1f18a12d20f2a66a77770fb3"
@@ -2553,16 +2535,6 @@ gulp-remove-code@^1.0.2:
     event-stream "^3.3.0"
     gulp-util "^3.0.4"
 
-gulp-remove-html@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/gulp-remove-html/-/gulp-remove-html-1.3.0.tgz#eac8f63462dfc76517fa7a7fce3c92af396ecff6"
-  dependencies:
-    assert "^1.3.0"
-    event-stream "^3.3.1"
-    gulp-util "^3.0.6"
-    through2 "^2.0.0"
-    vinyl "^0.5.0"
-
 gulp-rename@^1.2.0, gulp-rename@^1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/gulp-rename/-/gulp-rename-1.2.2.tgz#3ad4428763f05e2764dec1c67d868db275687817"
@@ -2583,6 +2555,18 @@ gulp-sequence@^0.4.4:
   dependencies:
     gulp-util ">=3.0.0"
     thunks "^4.5.1"
+
+gulp-size@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/gulp-size/-/gulp-size-2.1.0.tgz#1c2b64f17f9071d5abd99d154b7b3481f8fba128"
+  dependencies:
+    chalk "^1.0.0"
+    gulp-util "^3.0.0"
+    gzip-size "^3.0.0"
+    object-assign "^4.0.1"
+    pretty-bytes "^3.0.1"
+    stream-counter "^1.0.0"
+    through2 "^2.0.0"
 
 gulp-sourcemaps@1.6.0:
   version "1.6.0"
@@ -2660,7 +2644,7 @@ gulp-util@>=3.0.0, gulp-util@^3, gulp-util@^3.0, gulp-util@^3.0.0, gulp-util@^3.
     through2 "^2.0.0"
     vinyl "^0.5.0"
 
-gulp-util@^2.2.16, gulp-util@~2.2.0:
+gulp-util@^2.2.16:
   version "2.2.20"
   resolved "https://registry.yarnpkg.com/gulp-util/-/gulp-util-2.2.20.tgz#d7146e5728910bd8f047a6b0b1e549bc22dbd64c"
   dependencies:
@@ -2721,6 +2705,12 @@ gulplog@^1.0.0:
   resolved "https://registry.yarnpkg.com/gulplog/-/gulplog-1.0.0.tgz#e28c4d45d05ecbbed818363ce8f9c5926229ffe5"
   dependencies:
     glogg "^1.0.0"
+
+gzip-size@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/gzip-size/-/gzip-size-3.0.0.tgz#546188e9bdc337f673772f81660464b389dce520"
+  dependencies:
+    duplexer "^0.1.1"
 
 har-validator@~2.0.6:
   version "2.0.6"
@@ -2952,10 +2942,6 @@ inherits@1:
 inherits@2, inherits@2.0.3, inherits@^2.0.1, inherits@^2.0.3, inherits@~2.0.0, inherits@~2.0.1:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.3.tgz#633c2c83e3da42a502f52466022480f4208261de"
-
-inherits@2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.1.tgz#b17d08d326b4423e568eff719f91b0b1cbdf69f1"
 
 ini@^1.3.4, ini@~1.3.0:
   version "1.3.4"
@@ -3822,10 +3808,6 @@ map-cache@^0.2.0:
 map-obj@^1.0.0, map-obj@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/map-obj/-/map-obj-1.0.1.tgz#d933ceb9205d82bdcf4886f6742bdc2b4dea146d"
-
-map-stream@~0.0.4:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/map-stream/-/map-stream-0.0.6.tgz#d2ef4eb811a28644c7a8989985c69c2fdd496827"
 
 map-stream@~0.1.0:
   version "0.1.0"
@@ -4702,6 +4684,12 @@ preserve@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
 
+pretty-bytes@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/pretty-bytes/-/pretty-bytes-3.0.1.tgz#27d0008d778063a0b4811bb35c79f1bd5d5fbccf"
+  dependencies:
+    number-is-nan "^1.0.0"
+
 pretty-bytes@^4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/pretty-bytes/-/pretty-bytes-4.0.2.tgz#b2bf82e7350d65c6c33aa95aaa5a4f6327f61cd9"
@@ -5391,6 +5379,10 @@ stream-consume@~0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/stream-consume/-/stream-consume-0.1.0.tgz#a41ead1a6d6081ceb79f65b061901b6d8f3d1d0f"
 
+stream-counter@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/stream-counter/-/stream-counter-1.0.0.tgz#91cf2569ce4dc5061febcd7acb26394a5a114751"
+
 stream-shift@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/stream-shift/-/stream-shift-1.0.0.tgz#d5c752825e5367e786f78e18e445ea223a155952"
@@ -5834,12 +5826,6 @@ user-home@^1.1.1:
 util-deprecate@~1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
-
-util@0.10.3:
-  version "0.10.3"
-  resolved "https://registry.yarnpkg.com/util/-/util-0.10.3.tgz#7afb1afe50805246489e3db7fe0ed379336ac0f9"
-  dependencies:
-    inherits "2.0.1"
 
 utils-merge@1.0.0:
   version "1.0.0"
